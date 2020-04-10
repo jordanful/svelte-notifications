@@ -71,25 +71,27 @@
   :global(.toasts) {
     list-style: none;
     position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
-    padding: 12px;
-    margin: 30px;
+    margin-bottom: 20px;
     z-index: 9999;
   }
 
   :global(.toasts) > .toast {
     position: relative;
     margin: 10px;
-    min-width: 40vw;
+    width: auto;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
     position: relative;
     animation: animate-in 350ms forwards;
     color: #fff;
   }
 
   :global(.toasts) > .toast > .content {
-    padding: 10px;
+    padding: 12px;
     display: block;
-    font-weight: 500;
   }
 
   :global(.toasts) > .toast > .progress {
